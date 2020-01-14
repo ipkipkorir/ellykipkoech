@@ -12,7 +12,9 @@ html, body {
 	padding: 0;
 }
 * h1 {
-	font-size: 24px;
+	font-size: 22px; 
+	color: #567;
+	padding: 6px;
 }
 
 /***********
@@ -36,7 +38,7 @@ profile-section
 	left: 0; 
 	width: 25%;
 	flex-direction: column; 
-	margin: 20px 25px; 
+	margin: 10px 25px; 
 	background: #fff; text-align: center; line-height: 1.2;
 }
 
@@ -46,14 +48,16 @@ Passport photo
 #profile-section [passport-photo] {
 	display: block;
 	width: 28%;
-	margin: 20px auto; 
+	margin: 18px auto 5px;
 	height: auto;
 	border-radius: 50%;
 }
-
-#profile p {
-	padding: 18px 16px;
+.profile hr{
+	width: 80%; 
+	margin: 0 auto; 
+	border: 1px #ccc solid;
 }
+
 nav {
 	display: flex;
 	flex-direction: column; 
@@ -112,6 +116,11 @@ Bottom content
 .bottom-content {
 	display: flex;
 	flex-direction: column;
+}
+.bottom-content a[download-link] {
+	background: #fff;
+	color: #306777;
+	border-radius: 8px;
 }
 .bottom-content[social-links] {
 	display: flex; 
