@@ -1,0 +1,139 @@
+/********
+Global 
+*********/
+html, body {
+	font-family: Century Schoolbook, Arial, Sans-serif;
+	line-height: 1.5;
+	background-color: #ccc;
+	font-size: 18px;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+* h1 {
+	font-size: 24px;
+}
+
+/***********
+Main
+************/
+main {
+	display: flex;
+	flex-direction: row;
+}
+/***********
+profile-section
+************/
+#profile-section {
+	width: 30%; 
+	
+}
+#profile-section .container{
+	display: flex; 
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	width: 25%;
+	flex-direction: column; 
+	margin: 20px 25px; 
+	background: #fff; text-align: center; line-height: 1.2;
+}
+
+/*********
+Passport photo
+*********/
+#profile-section [passport-photo] {
+	display: block;
+	width: 28%;
+	margin: 20px auto; 
+	height: auto;
+	border-radius: 50%;
+}
+
+#profile p {
+	padding: 18px 16px;
+}
+nav {
+	display: flex;
+	flex-direction: column; 
+}
+nav a {
+	padding: 6px; 
+	text-decoration: none; 
+	color: #337097;
+	font-weight: bold;
+}
+nav a:hover {
+	background-color: #336777;
+	color: #fff;
+}
+nav a.menu-icon {
+	display: none;
+}
+
+/***************************************
+content section
+****************************************/
+#content-section {
+	width: 60%;
+	margin not(::first-child): 20px 40px;
+}
+.main-content {
+	background: #fff;
+	box-shadow: 4px 2px 4px 2px #333;
+	line-height: 1.8;
+}
+#content-section h2, 
+#content-section p {
+	padding: 4px 25px;
+}
+#content-section h2 {
+	margin-top: 22px; 
+	color: #306777;
+}
+
+/****************
+Bottom content
+****************/
+#bottom {
+	background: #306777;
+	display: flex; 
+	flex-direction: column;
+	color: #fff;
+	margin-top: 20px;
+	box-shadow: none;
+}
+#bottom .bottom-content {
+	width: 100%;
+	text-align: center;
+	margin: 45px 10px;
+}
+.bottom-content {
+	display: flex;
+	flex-direction: column;
+}
+.bottom-content[social-links] {
+	display: flex; 
+	flex-direction: row;
+	justify-content: center;
+}
+.bottom-content a {
+	padding: 8px 18px;
+	text-decoration: none;
+	color: #fff;
+}
+.bottom-content a:hover {
+	background: #f4f4f4;
+	color:#306777;
+	font-weight: bold;
+}
+#bottom hr {
+	width: 60%;
+	margin: 0 auto;
+	border: 1px #fff solid;
+}
+
+/***************************************
+Media queries
+**************************************/
