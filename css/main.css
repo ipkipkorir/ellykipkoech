@@ -1,16 +1,19 @@
 /********
 Global 
 *********/
+* {
+	margin: 0;
+	padding: 0;
+	align-self: center;
+}
+
 html, body {
 	font-family: Century Schoolbook, Arial, Sans-serif;
 	line-height: 1.5;
 	background-color: #ccc;
 	font-size: 18px;
 }
-* {
-	margin: 0;
-	padding: 0;
-}
+
 * h1 {
 	font-size: 22px; 
 	color: #567;
@@ -55,18 +58,20 @@ Passport photo
 .profile hr{
 	width: 80%; 
 	margin: 0 auto; 
-	border: 1px #ccc solid;
+	border: 1px #306777 solid;
 }
 
 nav {
 	display: flex;
 	flex-direction: column; 
+	width: auto;
 }
 nav a {
 	padding: 6px; 
 	text-decoration: none; 
 	color: #337097;
-	font-weight: bold;
+	font-weight: bold; 
+	width: 100%;
 }
 nav a:hover {
 	background-color: #336777;
@@ -120,7 +125,7 @@ Bottom content
 .bottom-content a[download-link] {
 	background: #fff;
 	color: #306777;
-	border-radius: 8px;
+	border-radius: 25px;
 }
 .bottom-content[social-links] {
 	display: flex; 
@@ -143,6 +148,67 @@ Bottom content
 	border: 1px #fff solid;
 }
 
+/*footer*/
+footer {
+	min-height: 10vh; 
+	background: rgb(7,7,7);
+}
+
 /***************************************
 Media queries
 **************************************/
+
+/*All devices with display upto 320px*/
+@media all and (max-width: 768px) {
+	/*************
+	Change the display flex-direction of main to column
+	***************/
+	main {
+		display: flex;
+		flex-direction: column;
+	}
+
+	/*
+	make the profile section and its children 
+	occupy full width
+	*/
+	#profile-section {
+		width: 100vw;
+		height: 100%;
+	}
+	#profile-section .container {
+		width: 100vw;
+		position: relative;
+		top: 0;
+		height: 100%;
+		margin: 0;
+	}
+
+	/**Make content section occupy full width **/
+	#content-section {
+		width: 100vw;
+	}
+	.main-content {
+		background: #fff;
+		box-shadow: none;
+		line-height: 1.8;
+	}
+
+	#bottom .bottom-content {
+		width: 100%;
+		min-height: 20vh;
+	}
+	.bottom-content[social-links] a {
+		width: 60%;
+	}
+
+	.bottom-content[social-links] {
+		display: flex;
+		flex-direction: column;
+		align-self: center;
+		margin: 20px 50px 10px;
+	}
+	#bottom hr {
+		display: none;
+	}
+}
